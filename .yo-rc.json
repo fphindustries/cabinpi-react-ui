@@ -1,0 +1,9 @@
+{
+  "generator-react-webpack": {
+    "appName": "rwr",
+    "style": "css",
+    "cssmodules": true,
+    "postcss": false,
+    "generatedWithVersion": 4
+  }
+}

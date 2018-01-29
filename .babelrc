@@ -1,8 +1,21 @@
 {
-    "presets": ["react", "env"],
-    "env": {
-      "development": {
-        "presets": ["react-hmre"]
-      }
+  "presets": [
+    ["es2015", { "modules": false }],
+    "react",
+    "airbnb"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-object-rest-spread",
+    "react-hot-loader/babel"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-object-rest-spread",
+        "istanbul"
+      ]
     }
   }
+}

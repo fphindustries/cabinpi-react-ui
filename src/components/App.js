@@ -1,20 +1,29 @@
-// Handles App template used on every page
-import React, {PropTypes} from 'react';
-import Header from './common/Header';
+import React from 'react';
+import {Route} from 'react-router';
+import {Link} from 'react-router-dom';
+import Home from './home/HomePage';
+import About from './about/AboutPage';
+import './app.css';
 
-class App extends React.Component {
-    render() {
-        return (
-            <div>
-                <Header/>
-                {this.props.children}
-            </div>
-        );
-    }
+class AppComponent extends React.Component {
+
+  render() {
+    return (
+      <div>
+        <header>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+        </header>
+        <main>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+        </main>
+      </div>
+    );
+  }
 }
 
-App.propTypes = {
-    children: PropTypes.object.isRequired
+AppComponent.defaultProps = {
 };
 
-export default App;
+export default AppComponent;

@@ -1,12 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-class HomePage extends React.Component {
+class AboutPage extends React.Component {
   render() {
     return (
-      <h1>Home Page aha</h1>
+      <h1>About Page</h1>
     );
   }
 }
 
-export default HomePage;
+export default AboutPage;

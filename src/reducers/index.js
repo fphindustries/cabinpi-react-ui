@@ -17,9 +17,11 @@
 
 import {combineReducers} from 'redux';
 import readings from './sensorReducer';
+import environmentReadings from './environmentSensorReducer';
 
 const rootReducer = combineReducers({
-  readings
+  readings,
+  environmentReadings
 });
 
 export default rootReducer;

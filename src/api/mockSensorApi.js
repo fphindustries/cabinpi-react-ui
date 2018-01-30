@@ -8,11 +8,28 @@ const readings = {
   exterior: 32.3
 };
 
+const environmentReadings = {
+  interiorTemp: 68.3,
+  exteriorTemp: 32.4,
+  humidity: 84,
+  pressure: 30.07,
+  time: new Date().getTime()
+};
+
 class SensorApi {
   static getCurrentReadings() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(Object.assign({}, readings));
+      }, delay);
+    });
+  }
+
+  static getEnivronmentReadings() {
+    return new Promise((resolve, reject) => {
+      environmentReadings.time = new Date().getTime();
+      setTimeout(() => {
+        resolve(Object.assign({}, environmentReadings));
       }, delay);
     });
   }

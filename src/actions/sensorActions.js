@@ -16,3 +16,17 @@ export function getReadings() {
     });
   };
 }
+
+export function getEnvironmentReadingsSuccess(environmentReadings) {
+  return { type: types.GET_ENVIRONMENT_READINGS_SUCCESS, environmentReadings };
+}
+
+export function getEnvironmentReadings() {
+  return function (dispatch) {
+    return SensorApi.getEnivronmentReadings().then((environmentReadings) => {
+      dispatch(getEnvironmentReadingsSuccess(environmentReadings));
+    }).catch((error) => {
+      throw (error);
+    });
+  };
+}

@@ -16,7 +16,7 @@ class HomePage extends React.Component {
 }
 
 HomePage.propTypes = {
-  readings: PropTypes.shape({}).isRequired
+  readings: PropTypes.shape({interior: PropTypes.number}).isRequired
 };
 
 function mapStateToProps(state, ownProps) {

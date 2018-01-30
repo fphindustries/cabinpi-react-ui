@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, NavLink, Route } from 'react-router-dom';
 import HomePage from './HomePage';
+import EnvironmentPage from './EnvironmentPage';
 import AboutPage from './AboutPage';
 
 // This is a class-based component because the current
@@ -17,10 +18,13 @@ class App extends React.Component {
         <div>
           <NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink>
           {' | '}
+          <NavLink to="/environment" activeStyle={activeStyle}>Environment</NavLink>
+          {' | '}
           <NavLink to="/about" activeStyle={activeStyle}>About</NavLink>
         </div>
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/environment" component={EnvironmentPage} />
           <Route path="/about" component={AboutPage} />
         </Switch>
       </div>

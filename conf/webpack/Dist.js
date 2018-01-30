@@ -15,14 +15,14 @@ class WebpackDistConfig extends WebpackBaseConfig {
       cache: false,
       devtool: 'source-map',
       entry: [
-        './client.js'
+        './index.js'
       ],
       plugins: [
         new webpack.DefinePlugin({
           'process.env.NODE_ENV': '"production"'
         }),
         new webpack.optimize.AggressiveMergingPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoEmitOnErrorsPlugin()
       ]
     };
 

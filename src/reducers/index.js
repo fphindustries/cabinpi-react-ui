@@ -8,9 +8,18 @@
  *          you edit them, they are not updated again.
  */
 /* Populated by react-webpack-redux:reducer */
-import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux';
+// import { combineReducers } from 'redux';
+// import { routerReducer } from 'react-router-redux';
 
-const reducers = {routing: routerReducer};
-const combined = combineReducers(reducers);
-module.exports = combined;
+// const reducers = {routing: routerReducer};
+// const combined = combineReducers(reducers);
+// module.exports = combined;
+
+import {combineReducers} from 'redux';
+import readings from './sensorReducer';
+
+const rootReducer = combineReducers({
+  readings
+});
+
+export default rootReducer;
